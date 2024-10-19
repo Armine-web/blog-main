@@ -4,7 +4,7 @@ function createRegistrationLayout() {
         UI.createElement("a", { href: "./home.html" }, "Home"),
         UI.createElement("a", { href: "./index.html" }, "Log In")]),
             UI.createElement("div", { class: "form-wrapper" },[
-                UI.createElement("div", { class: "login-container" }, [
+                UI.createElement("div", { class: "form-container" }, [
                     UI.createElement("form", { class: "login-form" }, [
                         UI.createElement("input", {placeholder: "First Name"}),
                         UI.createElement("input", {placeholder: "Last Name"}),

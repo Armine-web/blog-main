@@ -7,7 +7,6 @@
 
 body {
   background-color: #f0f0f0;
-  margin: 0;
 }
 
 .container-root {
@@ -19,7 +18,7 @@ body {
 .header {
   display: flex;
   justify-content: flex-end;
-  background-color: #4CAF50;
+  background-color:  #008ae6;
   padding: 20px;
   height: 65px;
   box-sizing: border-box;
@@ -30,7 +29,20 @@ a:first-child{
 }
 
 a {
-  color: blue;
+    font-style:normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #FDFDFD;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+a:hover{
+  color: #ccc;
+  font-style: italic;
   text-decoration: underline;
 }
 
@@ -42,12 +54,12 @@ a {
   height: calc(100vh - 40px);
 }
 
-.login-container {
-  padding: 20px;
+.form-container {
+  padding: 25px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 350px;
 }
 
 form {
@@ -60,18 +72,27 @@ form input {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid #ccc;
   box-sizing: border-box;
+  outline: none;
 }
 
 button {
-  padding: 10px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border: 2px solid #006bb3;
+  padding: 8px 18px;
+  border-radius: 30px;
+  color: #006bb3;
+  font-weight: 600;
+  background-color: transparent;
+  cursor: pointer; 
+  font-size: 20px;
+}
+
+button:hover{
+  background-color: #ccc;
+  color: #ccc;
+  background-color: #006bb3;
 }
 
 .main-section {
@@ -115,8 +136,9 @@ select{
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none;
+  border-bottom:  1px solid #ccc;
+  outline: none;
 }
 
 .inputs-wrapper{

@@ -1,12 +1,22 @@
-// homework
-// createElement(element, attributes, children);
-// render(element, target);
+function isDOMElement(element) {
+  return element instanceof Element;
+}
 
 window.UI = {
     createElement: function (element, attributes, children) {
-      const elem = document.createElement(element);  
+      if (!element) {
+        console.log('Invalid Element Type')
+        return undefined;
+      }
+
+      const elem = document.createElement(element); 
+      
+      if(!isDOMElement(elem)) {
+        return undefined;
+      } 
         Object.keys(attributes).forEach(key => {
         elem.setAttribute(key, attributes[key]);
+        
         });
 
       
@@ -21,13 +31,21 @@ window.UI = {
       } else if (typeof children === 'string') {
         elem.appendChild(document.createTextNode(children));
       }
-      
+    
       return elem;
     },
 
     render: function (element, target) {
+      
+      if(!element || !target) {
+        console.log('Invalid Element Type');
+        return undefined;
+      }
+    
       target.appendChild(element);
+      
     }
   };
 
 
+ 
